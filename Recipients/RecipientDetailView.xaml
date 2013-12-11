@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="StripeTransfer.RecipientDetailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d" >
+    <Grid Margin="5" Background="#200AF00A">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" SharedSizeGroup="B" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="Auto" SharedSizeGroup="F" />
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <TextBox x:Name="Name" Grid.Column="1" VerticalAlignment="Center" Margin="5" Metro:TextboxHelper.Watermark="name" />
+        <ComboBox x:Name="RecipientType" Grid.Column="2" VerticalAlignment="Center" Margin="5"  />
+        <TextBox x:Name="TaxId" Grid.Column="3" VerticalAlignment="Center" Margin="5" Metro:TextboxHelper.Watermark="taxid / ssn"/>
+        <TextBox x:Name="RoutingNumber" Grid.Column="4" VerticalAlignment="Center" Margin="5" Metro:TextboxHelper.Watermark="routing number"/>
+        <TextBox x:Name="AccountNumber" Grid.Column="5" VerticalAlignment="Center" Margin="5" Metro:TextboxHelper.Watermark="account number"/>
+        
+        <StackPanel Orientation="Horizontal" Grid.Column="6">
+            
+            <Button x:Name="Save" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Rectangle Width="20" Height="20" Margin="5">
+                    <Rectangle.Fill>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_save}" ></VisualBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Button>
+
+            <Button x:Name="Delete" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Rectangle Width="20" Height="20" Margin="5">
+                    <Rectangle.Fill>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_delete}" ></VisualBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

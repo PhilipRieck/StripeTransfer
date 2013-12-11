@@ -1,0 +1,36 @@
+﻿<Metro:MetroWindow x:Class="StripeTransfer.MainView"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:behaviours="http://metro.mahapps.com/winfx/xaml/shared"
+        xmlns:cal="http://www.caliburnproject.org"
+        Height="650" Width="860"
+        ResizeMode="CanResizeWithGrip"
+        SaveWindowPosition="False"
+        ShowIconOnTitleBar="True"          
+        Icon="..\Resources\appbar.reply.calendar.png"
+        >
+    
+    
+    <Metro:MetroWindow.WindowCommands>
+        <Metro:WindowCommands>
+            <Button x:Name="OpenSettings" Content="Settings" cal:Message.Attach="OpenSettings" />
+        </Metro:WindowCommands>
+    </Metro:MetroWindow.WindowCommands>
+    
+    <Metro:MetroWindow.Flyouts>
+        <Metro:FlyoutsControl x:Name="Flyouts">
+            <Metro:FlyoutsControl.ItemContainerStyle>
+                <Style BasedOn="{StaticResource {x:Type Metro:Flyout}}" TargetType="{x:Type Metro:Flyout}">
+                    <Setter Property="Header" Value="{Binding Header}" />
+                    <Setter Property="IsOpen" Value="{Binding IsOpen}" />
+                    <Setter Property="Position" Value="{Binding Position}" />
+                </Style>
+            </Metro:FlyoutsControl.ItemContainerStyle>
+        </Metro:FlyoutsControl>
+    </Metro:MetroWindow.Flyouts>
+    
+    <TabControl x:Name="Items" />
+    
+</Metro:MetroWindow>

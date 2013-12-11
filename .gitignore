@@ -1,0 +1,26 @@
+# Build folders
+[Bb]in/
+[Oo]bj/
+
+# Keep the library folders
+!/[Ll]ibs
+
+# nuget restorable packages
+packages/
+
+# Merge conflict backups
+*.orig
+
+# VS user files
+*.user
+*.suo
+*.sln.cache
+*.[Cc]ache
+
+# Resharper
+_Resharper*
+_ReSharper.*
+*.ReSharper.user
+
+# Sublime
+*.sublime-workspace

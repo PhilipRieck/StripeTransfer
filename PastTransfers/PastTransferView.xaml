@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="StripeTransfer.PastTransferView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid Margin="5,8">
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="15" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="1" x:Name="Date" HorizontalAlignment="Left"/>
+        <Label Grid.Column="2" x:Name="Status" HorizontalAlignment="Center"/>
+        <Label Grid.Column="3" x:Name="Recipient" HorizontalAlignment="Left"/>
+        <Label Grid.Column="4" x:Name="Amount" HorizontalAlignment="Right"/>
+        
+    </Grid>
+</UserControl>

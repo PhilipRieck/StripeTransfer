@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="StripeTransfer.Shell.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">Test Key</Label>
+        <TextBox x:Name="TestKey" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="8" Width="200" />
+
+        <Label Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">Live Key</Label>
+        <TextBox x:Name="LiveKey" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="8" Width="200" />
+        
+        <Metro:ToggleSwitch Grid.Row="3" Grid.Column="2" OnLabel="Live" OffLabel="Test" Margin="35,8" IsChecked="{Binding IsLive}" />
+    </Grid>
+</UserControl>

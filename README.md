@@ -15,26 +15,27 @@ For some small sites that want to do this manually, this means quickly setting u
 
 Well, no more.  This tool does the following:
 
-	* Allows managing manual transfer of funds from your stripe account to recipients
-	* Allows creating recipients
-	* (future) allows editing recipient details
++ Allows managing manual transfer of funds from your stripe account to recipients
++ Allows creating recipients
++ (future) allows editing recipient details
 
 
-###Run/Build
+###Just Run
 
 
-Pull the release you want from the releases page.
-Or, clone this repository and build it using Visual Studio or msbuild.
+Pull the latest release from the [releases page](https://github.com/PhilipRieck/StripeTransfer/releases).
 
-Next, run it.
+Unzip it somewhere, no install required.
 
-Then hit "settings" and put your stripe keys in the box.  Keep an eye on test/live mode - this is the stripe mode you're using!
+Run it! Then hit "settings" and put your stripe keys in the box.  Keep an eye on test/live mode - this is the stripe mode you're using!
 
-Enjoy!
+
+###Build 
+
+Clone this repository and build it using Visual Studio or msbuild.  No tools or libraries needed, although the nuget packages listed below will be downloaded to a packages directory during the initial build.
 
 
 ###About the code
-
 
 This was pair programmed by myself and a _very_ junior programmer who wishes to remain anonymous.
 One day he will claim credit.
@@ -42,15 +43,14 @@ One day he will claim credit.
 ###Libraies
 
 *From Nuget:*
-	* I love [Autofac](http://autofac.org/), so this uses Autofac
-	* For WPF programming, I also adore [Caliburn.Micro](http://caliburnmicro.codeplex.com/).  That's in here
-	* We used the [MahApps.Metro](http://mahapps.com/MahApps.Metro/) framework to give it that metro look.  I recommend taking a look if you
-	  enjoy this type of UI
+
++ I love [Autofac](http://autofac.org/), so this uses Autofac
++ For WPF programming, I also adore [Caliburn.Micro](http://caliburnmicro.codeplex.com/).  That's in here
++ We used the [MahApps.Metro](http://mahapps.com/MahApps.Metro/) framework to give it that metro look.  I recommend taking a look if you enjoy this type of UI
 
 *In the libs directory:*
-	* While [stripe.net](https://github.com/jaymedavis/stripe.net) has a nuget package, it didn't include the balance service
-	which you can find my pull request for, nor did the transfer object return the recipientId, which meant you couldn't actually know
-	who you sent money for.  So this is built from my stripe.net fork, which is the original with two very minor modifications.
+
++ While [stripe.net](https://github.com/jaymedavis/stripe.net) has a nuget package, it didn't include the balance service	which you can find my pull request for, nor did the transfer object return the recipientId, which meant you couldn't actually know who you sent money for.  So this is built from my stripe.net fork, which is the original with two very minor modifications.
 
 
 
